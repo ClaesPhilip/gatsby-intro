@@ -15,7 +15,8 @@ const NavLink = styled(Link)`
 
 
    &.current-page {
-       border-bottom: 2px solid #222;
+       border-bottom: 2px solid pink;
+       color: pink;
    }
 
    &:last-of-type {
@@ -26,14 +27,18 @@ const NavLink = styled(Link)`
 const Header = () => (
     <header
       css={css`
-        background: #eee;
-        border-bottom: 1px solid #ddd;
+        // background: #eee;
+        // border-bottom: 1px solid #ddd;
         display: flex;
         justify-content: space-between;
-        padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
+        padding: 0.5rem calc((40vw - 550px - 0.5rem) / 2);
       `}
     >
-       <NavLink to ='/' fontWeight='bold'>FEM workshop</NavLink>
+        <div className='headerLeft'>
+       <NavLink to ='/' fontWeight='bold'>Letsgig Logo</NavLink>
+       <NavLink to ='/hireStaff'activeClassName='current-page'>Hyra Personal</NavLink>
+       <NavLink to ='/findJob'activeClassName='current-page'>Hitta Jobb</NavLink>
+       </div>
     <nav 
         css={css`
            margin-top: 0;
